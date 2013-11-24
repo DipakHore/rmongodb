@@ -34,6 +34,7 @@
 #' @export mongo.get.values
 #' @export mongo.distinct
 mongo.distinct <- function(mongo, ns, key, query=mongo.bson.empty()) {
+  
   pos <- regexpr('\\.', ns)
   if (pos == 0) {
     print("mongo.distinct: No '.' in namespace")
